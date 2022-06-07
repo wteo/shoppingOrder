@@ -12,6 +12,7 @@ const MealItem = props => {
             <div>
                 <h3>{props.name}</h3>
                 <div className={classes.description}>{props.description}</div>
+                <img className={classes.foodImage} src={props.image} alt={props.name} />
                 <div className={classes.price}>{price}</div>
             </div>
             <div>
