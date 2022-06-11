@@ -15,7 +15,7 @@ const DUMMY_MEALS = [
       name: 'Roti Canai with Fish Curry',
       image: roti,
       description: 'Get 2 pieces of crispy rotis with home-cooked fish curry.',
-      price: 2.50,
+      price: 5.80,
     },
     {
       id: 'm2',
