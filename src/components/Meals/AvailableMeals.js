@@ -21,14 +21,14 @@ const DUMMY_MEALS = [
       id: 'm2',
       name: 'Char Kway Teow',
       image: charKwayTeow,
-      description: 'Our traditional fried noodles recipe! Cooked with fresh prawns and cockles.',
+      description: 'Our traditional fried noodle recipe! Cooked with fresh prawns and cockles.',
       price: 15.50,
     },
     {
       id: 'm3',
       name: 'Hor Fun',
       image: horFun,
-      description: 'Fried egg noodle served with rich gravy and silky egg.',
+      description: 'Fried rice noodle served with rich gravy and silky egg.',
       price: 16.40,
     },
     {
