@@ -15,28 +15,28 @@ const DUMMY_MEALS = [
       name: 'Roti Canai with Fish Curry',
       image: roti,
       description: 'Get 2 pieces of crispy rotis with home-cooked fish curry.',
-      price: 10.00,
+      price: 2.50,
     },
     {
       id: 'm2',
       name: 'Char Kway Teow',
       image: charKwayTeow,
       description: 'Our traditional fried noodle recipe! Cooked with fresh prawns and cockles.',
-      price: 15.50,
+      price: 7.50,
     },
     {
       id: 'm3',
       name: 'Hor Fun',
       image: horFun,
       description: 'Fried rice noodle served with rich gravy and silky egg.',
-      price: 16.40,
+      price: 8.00,
     },
     {
       id: 'm4',
       name: 'Nasi Lemak with Rendang Chicken',
       image: nasi,
       description: 'A traditional Malay dish consists of fragrant rice cooked in coconut milk and pandan leaf. Served with 1 tasty fried chicken piece!',
-      price: 15.70,
+      price: 6.50,
     },
   ];
 
