@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import { isValidElement } from 'react/cjs/react.production.min';
 
 import CartContext from './cart-context';
 
