@@ -1,48 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import MealItem from './MealItem/MealItem';
 import classes from './AvailableMeals.module.css';
 import Card from '../UI/Card';
 
-import roti from '../../assets/roti.jpg';
-import charKwayTeow from '../../assets/charKwayTeow.jpg';
-import horFun from '../../assets/horFun.jpg';
-import nasi from '../../assets/nasi.jpg';
-
-const DUMMY_MEALS = [
-    {
-      id: 'm1',
-      name: 'Roti Canai with Fish Curry',
-      image: roti,
-      description: 'Get 2 pieces of crispy rotis with home-cooked fish curry.',
-      price: 5.80,
-    },
-    {
-      id: 'm2',
-      name: 'Char Kway Teow',
-      image: charKwayTeow,
-      description: 'Our traditional fried noodle recipe! Cooked with fresh prawns and cockles.',
-      price: 7.50,
-    },
-    {
-      id: 'm3',
-      name: 'Hor Fun',
-      image: horFun,
-      description: 'Fried rice noodle served with rich gravy and silky egg.',
-      price: 8.00,
-    },
-    {
-      id: 'm4',
-      name: 'Nasi Lemak with Rendang Chicken',
-      image: nasi,
-      description: 'A traditional Malay dish consists of fragrant rice cooked in coconut milk and pandan leaf. Served with 1 tasty fried chicken piece!',
-      price: 6.50,
-    },
-  ];
-
 const AvailableMeals = () => {
 
-    const mealsList = DUMMY_MEALS.map(meal => (
+  const [meals, setMeals] = useState([]);
+
+  useEffect(() => {
+    const fetchMeals = async() => {
+      const response = await fetch('https://shoppingorder-74d5c-default-rtdb.asia-southeast1.firebasedatabase.app/meals.json');
+      const responseData = await response.json();
+      const loadedMeals = [];
+
+      for (const key in responseData) {
+        loadedMeals.push({
+          id: key,
+          name: responseData[key].name,
+          image: responseData[key].image,
+          description: responseData[key].description,
+          price: responseData[key].price,
+        })
+      }
+
+      setMeals(loadedMeals);
+      };
+      fetchMeals();
+      }, []);
+
+    const mealsList = meals.map(meal => (
         <MealItem 
             id={meal.id}
             key={meal.id} 
